@@ -4,12 +4,12 @@ const auth = require("../middleware/auth");
 const authAdmin = require("../middleware/authAdmin");
 
 router
-  .route("/products")
+  .route("/books")
   .get(bookController.getBooks)
   .post(auth, authAdmin, bookController.createBook);
 
 router
-  .route("/products/:id")
+  .route("/books/:id")
   .delete(auth, authAdmin, bookController.deleteBook)
   .put(auth, authAdmin, bookController.updateBook);
 

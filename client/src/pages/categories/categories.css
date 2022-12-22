@@ -1,0 +1,61 @@
+.categories {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+.categories form {
+  width: 390px;
+  margin-bottom: 20px;
+}
+.categories label {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.categories input,
+button {
+  height: 35px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid teal;
+}
+.categories input {
+  width: 240px;
+  font-size: 20px;
+}
+.categories button {
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.success {
+  background-color: teal;
+  color: white;
+}
+.warning {
+  background-color: rgb(255, 178, 126);
+  color: darkblue;
+}
+.danger {
+  background-color: rgb(255, 87, 87);
+  color: darkblue;
+}
+.categories .row {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+p {
+  color: darkblue;
+  font-size: 20px;
+}
