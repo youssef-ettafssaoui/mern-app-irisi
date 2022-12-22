@@ -15,7 +15,7 @@ function BookItem({ book, isAdmin, deleteBook, handleCheck }) {
 
       <div className="book_box">
         <h2 title={book.title}>
-          {book.title} by <small>{book.author}</small>
+          {book.title} <small>{book.author}</small>
         </h2>
         <span>${book.price}</span>
         <p>{book.description?.substring(0, 50)}...</p>
