@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-import "./login.scss";
-const Login = () => {
+import "./register.scss";
+const Register = () => {
   const [user, setUser] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -13,10 +13,10 @@ const Login = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const loginSubmit = async (e) => {
+  const registerSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/user/login", { ...user });
+      await axios.post("/user/register", { ...user });
 
       localStorage.setItem("firstLogin", true);
 
@@ -25,20 +25,28 @@ const Login = () => {
       alert(err.response.data.msg);
     }
   };
-
   return (
-    <div className="login">
+    <div className="register">
       <div className="card">
-        <div className="login-form">
+        <div className="registration">
           <h1>
-            <i class="fa fa-user-circle"></i> Login.
+            <i class="fa fa-edit me-2"></i> Register.
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
+            Pariatur non et deserunt sit deserunt excepteur. Nulla anim id
+            tempor sunt velit incididunt eiusmod anim nostrud elit Lorem fugiat
+            magna.
           </p>
-          <form onSubmit={loginSubmit}>
+          <form onSubmit={registerSubmit}>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Name"
+              value={user.name}
+              onChange={onChangeInput}
+            />
+
             <input
               type="email"
               name="email"
@@ -47,6 +55,7 @@ const Login = () => {
               value={user.email}
               onChange={onChangeInput}
             />
+
             <input
               type="password"
               name="password"
@@ -56,7 +65,7 @@ const Login = () => {
               value={user.password}
               onChange={onChangeInput}
             />
-            <button type="submit">Login.</button>
+            <button type="submit">Register</button>
           </form>
         </div>
       </div>
@@ -64,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

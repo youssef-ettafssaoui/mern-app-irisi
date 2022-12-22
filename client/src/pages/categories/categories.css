@@ -21,7 +21,7 @@ button {
   height: 35px;
   border: none;
   outline: none;
-  border-bottom: 1px solid teal;
+  border-bottom: 1px solid darkblue;
 }
 .categories input {
   width: 240px;
@@ -35,7 +35,7 @@ button {
 }
 
 .success {
-  background-color: teal;
+  background-color: darkblue;
   color: white;
 }
 .warning {

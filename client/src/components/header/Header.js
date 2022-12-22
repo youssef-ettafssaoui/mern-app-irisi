@@ -86,7 +86,7 @@ function Header() {
           loggedRouter()
         ) : (
           <li>
-            <Link to="/login">
+            <Link to="/login-and-register">
               <i className="fa fa-sign-in"></i> Login & Register
             </Link>
           </li>
@@ -103,7 +103,7 @@ function Header() {
         <div className="cart-icon">
           <span>{cart.length}</span>
           <Link to="/cart">
-            <img src={Cart} alt="" width="30" />
+            <img src={Cart} alt="" width="35" style={{ color: "#555" }} />
           </Link>
         </div>
       )}

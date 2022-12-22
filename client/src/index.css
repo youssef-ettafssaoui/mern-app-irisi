@@ -39,9 +39,6 @@ button {
 /* ---------------- Detail book --------------- */
 @import url("./pages/detailBook/detailBook.css");
 
-/* ------------- Login/Register ----------------- */
-@import url("./pages/auth/login.css");
-
 /* ------------ Cart ------------------- */
 @import url("./pages/cart/cart.css");
 

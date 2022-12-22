@@ -52,7 +52,7 @@ function Books() {
     setIsCheck(!isCheck);
   };
 
-  const deleteAll = () => {
+  const deledarkbluel = () => {
     books.forEach((book) => {
       if (book.checked) deleteBook(book._id, book.images.public_id);
     });
@@ -72,7 +72,7 @@ function Books() {
         <div className="delete-all">
           <span>Select all</span>
           <input type="checkbox" checked={isCheck} onChange={checkAll} />
-          <button onClick={deleteAll}>Delete ALL</button>
+          <button onClick={deledarkbluel}>Delete ALL</button>
         </div>
       )}
 

@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalState } from "../../GlobalState";
 import axios from "axios";
+import CartImg from "../../icons/Empty-amico.svg";
 import PaypalButton from "./PaypalButton";
 
 function Cart() {
@@ -84,7 +85,25 @@ function Cart() {
 
   if (cart.length === 0)
     return (
-      <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart is Empty</h2>
+      <div className="cart-empty">
+        <center>
+          <img src={CartImg} alt="" width="450" />
+        </center>
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "50px",
+            color: "#555",
+            textTransform: "uppercase",
+          }}
+        >
+          <i className="fas fa-frown"></i> Your Cart is Empty
+        </h2>
+        <p style={{ textAlign: "center", fontSize: "30px", fontWeight: "700" }}>
+          Looks like You have not added anything to your cart. Go ahead &
+          explore our Library.
+        </p>
+      </div>
     );
 
   return (

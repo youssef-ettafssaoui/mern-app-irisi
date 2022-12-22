@@ -17,7 +17,9 @@ function Filters() {
   return (
     <div className="filter_menu">
       <div className="row">
-        <span>Filters : </span>
+        <span>
+          <i className="fa fa-filter"></i> Filters :&nbsp;
+        </span>
         <select name="category" value={category} onChange={handleCategory}>
           <option value="">All Books</option>
           {categories.map((category) => (
@@ -27,16 +29,18 @@ function Filters() {
           ))}
         </select>
       </div>
-
+      &nbsp;
+      <i className="fas fa-search"></i>
       <input
         type="text"
         value={search}
         placeholder="Enter your search..."
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
       />
-
       <div className="row sort">
-        <span>Sort By : </span>
+        <span>
+          <i className="fas fa-sort-amount-asc"></i> Sort By : &nbsp;
+        </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="">Newest</option>
           <option value="sort=oldest">Oldest</option>

@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import { GlobalState } from "../GlobalState";
 import NotFound from "./utils/not_found/NotFound";
-import Register from "./auth/Register";
-import Login from "./auth/Login";
 import CreateBook from "./createBook/CreateBook";
 import DetailBook from "./detailBook/DetailBook";
 import Cart from "./cart/Cart";
@@ -11,6 +9,7 @@ import Books from "./books/Books";
 import OrderHistory from "./history/OrderHistory";
 import OrderDetails from "./history/OrderDetails";
 import Categories from "./categories/Categories";
+import LoginAndRegisterPage from "./auth/LoginAndRegisterPage";
 
 function Pages() {
   const state = useContext(GlobalState);
@@ -23,14 +22,9 @@ function Pages() {
       <Route path="/detail/:id" exact element={<DetailBook />} />
 
       <Route
-        path="/login"
+        path="/login-and-register"
         exact
-        element={isLogged ? <NotFound /> : <Login />}
-      />
-      <Route
-        path="/register"
-        exact
-        element={isLogged ? <NotFound /> : <Register />}
+        element={isLogged ? <NotFound /> : <LoginAndRegisterPage />}
       />
 
       <Route

@@ -162,11 +162,16 @@ function CreateBook() {
             type="text"
             name="book_id"
             id="book_id"
+            placeholder="Please Enter the ID of the Book"
             required
             value={book.book_id}
             onChange={handleChangeInput}
             disabled={onEdit}
           />
+          <small className="warning-text">
+            <i className="fa fa-exclamation-triangle"></i> The ID should be
+            unique
+          </small>
         </div>
 
         <div className="row">
@@ -174,6 +179,7 @@ function CreateBook() {
           <input
             type="text"
             name="title"
+            placeholder="Please Enter the Title of the Book"
             id="title"
             required
             value={book.title}
@@ -186,6 +192,7 @@ function CreateBook() {
           <input
             type="text"
             name="author"
+            placeholder="Please Enter the Author of the Book"
             id="author"
             required
             value={book.author}
@@ -197,6 +204,7 @@ function CreateBook() {
           <label htmlFor="price">Price</label>
           <input
             type="number"
+            placeholder="Please Enter the Price of the Book"
             name="price"
             id="price"
             required
@@ -247,7 +255,9 @@ function CreateBook() {
           </select>
         </div>
 
-        <button type="submit">{onEdit ? "Update" : "Create"}</button>
+        <button type="submit">
+          <i className="fa fa-pencil-square"></i> {onEdit ? "Update" : "Create"}
+        </button>
       </form>
     </div>
   );

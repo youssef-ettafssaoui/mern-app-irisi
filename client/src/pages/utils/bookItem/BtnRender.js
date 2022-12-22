@@ -16,19 +16,19 @@ function BtnRender({ book, deleteBook }) {
             to="#!"
             onClick={() => deleteBook(book._id, book.images.public_id)}
           >
-            Delete
+            <i className="fas fa-trash"></i> Delete
           </Link>
           <Link id="btn_view" to={`/edit_book/${book._id}`}>
-            Edit
+            <i className="fas fa-pencil"></i> Edit
           </Link>
         </>
       ) : (
         <>
           <Link id="btn_buy" to="#!" onClick={() => addCart(book)}>
-            Buy
+            <i className="fas fa-cart-plus"></i> Buy
           </Link>
           <Link id="btn_view" to={`/detail/${book._id}`}>
-            View
+            <i className="fas fa-eye"></i> View
           </Link>
         </>
       )}
