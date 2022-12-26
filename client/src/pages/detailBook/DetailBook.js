@@ -26,12 +26,19 @@ function DetailBook() {
         <img src={detailBook.images.url} alt="" />
         <div className="box-detail">
           <div className="row">
-            <h5>
+            <h6
+              style={{
+                fontSize: "24px",
+                fontWeight: "700",
+                textTransform: "uppercase",
+              }}
+            >
               {detailBook.title} Writted by {detailBook.author}
-            </h5>
-            <h6>#id: {detailBook.book_id}</h6>
+            </h6>
           </div>
-          <span>{detailBook.price} MAD</span>
+          <span style={{ color: "darkblue", fontWeight: "700" }}>
+            {detailBook.price} MAD
+          </span>
           <br />
           <br />
           <h3>Summary of the Book :</h3> <br />
@@ -40,7 +47,17 @@ function DetailBook() {
           <br />
           <p>{detailBook.content}</p>
           <p>Sold : {detailBook.sold}</p>
-          <Link to="/cart" className="cart" onClick={() => addCart(detailBook)}>
+          <Link
+            style={{
+              backgroundColor: "white",
+              borderRadius: "30px",
+              color: "darkblue",
+              border: "2px solid darkblue",
+            }}
+            to="/cart"
+            className="cart"
+            onClick={() => addCart(detailBook)}
+          >
             Buy Now
           </Link>
         </div>

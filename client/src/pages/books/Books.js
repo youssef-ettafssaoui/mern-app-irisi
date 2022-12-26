@@ -70,9 +70,11 @@ function Books() {
 
       {isAdmin && (
         <div className="delete-all">
-          <span>Select all</span>
+          <span>Select all :</span>
           <input type="checkbox" checked={isCheck} onChange={checkAll} />
-          <button onClick={deledarkbluel}>Delete ALL</button>
+          <button onClick={deledarkbluel}>
+            <i className="fas fa-trash"></i> Delete ALL
+          </button>
         </div>
       )}
 

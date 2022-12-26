@@ -1,5 +1,6 @@
 .book_card {
   max-width: 300px;
+  background-color: rgb(255, 247, 233);
   overflow: hidden;
   height: 500px;
   padding: 15px;

@@ -3,6 +3,7 @@ import { GlobalState } from "../../GlobalState";
 import Menu from "../../icons/menu.svg";
 import Close from "../../icons/close.svg";
 import Cart from "../../icons/cart.svg";
+import Logo from "../../icons/shopping-cart.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -67,8 +68,9 @@ function Header() {
 
       <div className="logo">
         <h2>
-          <Link to="/">
-            <i className="fa fa-home"></i> {isAdmin ? "Admin Board" : "MIBY"}
+          <Link to="/" style={{ fontSize: "40px" }}>
+            <img src={Logo} alt="" width="50" />
+            {isAdmin ? "Admin Board" : "MIBY"}
           </Link>
         </h2>
       </div>

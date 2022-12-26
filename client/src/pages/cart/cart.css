@@ -4,7 +4,7 @@
   transform: scaleY(0.98);
 }
 .amount span {
-  color: teal;
+  color: darkblue;
   padding: 0 20px;
 }
 .amount button {
@@ -16,7 +16,7 @@
   position: absolute;
   top: 0;
   right: 5px;
-  color: teal;
+  color: darkblue;
   font-weight: 900;
   cursor: pointer;
 }
@@ -28,5 +28,5 @@
   justify-content: space-between;
 }
 .total h3 {
-  color: teal;
+  color: darkblue;
 }
